@@ -1,25 +1,43 @@
-<h1>Cart</h1>
+<h1>Ordered Pizza</h1>
 
 <div class="counter">
 
     <div class="block">
-        Small Pizza
+        <h3>Small Pizza</h3>
+
         Qty: {{small}}
         Price:{{smallprice}}
+        <form action="/addSmall " method="post">
+            <button class="btn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </form>
+        <form action="/minusSmall " method="post"></form>
+        <button class="btn" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
+        </form>
     </div>
     <div class="block">
-        Medium Pizza
+        <h3> Medium Pizza</h3>
         Qty:{{medium}}
         Price:{{mediumprice}}
+        <form action="/addMedium  " method="post">
+            <button class="btn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </form>
+        <form action="/minusMedium " method="post"></form>
+        <button class="btn" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
+        </form>
     </div>
     <div class="block">
-        Large Pizaa
+        <h3>Large Pizza</h3>
         Qty:{{large}}
         Price:{{largeprice}}
+        <form action="/addLarge" method="post">
+            <button class="btn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+        </form>
+        <form action="/minusLarge " method="post"></form>
+        <button class="btn" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
+        </form>
     </div>
 
-    <div>
-
+    <div class="block">
         Total: {{total}}
     </div>
 

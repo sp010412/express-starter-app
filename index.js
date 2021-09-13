@@ -20,30 +20,33 @@ app.set('view engine', 'handlebars');
 
 const pizzaInsta = pizza();
 
+
 app.get('/', function (req, res) {
 
 	res.render('index', {
-		total: pizzaInsta.grandTotal(),
+		total: 'R' + pizzaInsta.grandTotal(),
 	});
 
 });
 
 app.post('/smallCount', function (req, res) {
 	var qty1 = pizzaInsta.qtySmall();
-	res.render('index',{
+
+	res.render('index', {
 		small: qty1,
-		smallprice: pizzaInsta.priceForSmall(),
-		total: pizzaInsta.grandTotal(),
+		smallprice: 'R' + pizzaInsta.priceForSmall(),
+		total: 'R' + pizzaInsta.grandTotal(),
 
 	})
 });
 
 app.post('/mediumCount', function (req, res) {
 	var qty2 = pizzaInsta.qtyMedium();
-	res.render('index',{
+
+	res.render('index', {
 		medium: qty2,
-		mediumprice: pizzaInsta.priceForMedium(),
-		total: pizzaInsta.grandTotal(),
+		mediumprice: 'R' + pizzaInsta.priceForMedium(),
+		total: 'R' + pizzaInsta.grandTotal(),
 
 	})
 });
@@ -51,13 +54,56 @@ app.post('/mediumCount', function (req, res) {
 app.post('/largeCount', function (req, res) {
 	var qty3 = pizzaInsta.qtyLarge();
 
-	res.render('index',{
+	res.render('index', {
 		large: qty3,
-		largeprice: pizzaInsta.priceForLarge(),
-		total: pizzaInsta.grandTotal(),
+		largeprice: 'R' + pizzaInsta.priceForLarge(),
+		total: 'R' + pizzaInsta.grandTotal(),
 
 	})
 });
+
+app.post('/addSmall', function (req, res) {
+	var qty1 = pizzaInsta.qtySmall();
+
+	res.render('index', {
+		small: qty1,
+		smallprice: 'R' + pizzaInsta.priceForSmall(),
+		total: 'R' + pizzaInsta.grandTotal(),
+
+	})
+});
+
+app.post('/addMedium', function (req, res) {
+	var qty2 = pizzaInsta.qtyMedium();
+
+	res.render('index', {
+		medium: qty2,
+		mediumprice: 'R' + pizzaInsta.priceForMedium(),
+		total: 'R' + pizzaInsta.grandTotal(),
+
+	})
+});
+
+app.post('/addLarge', function (req, res) {
+	var qty3 = pizzaInsta.qtyLarge();
+
+	res.render('index', {
+		large: qty3,
+		largeprice: 'R' + pizzaInsta.priceForLarge(),
+		total: 'R' + pizzaInsta.grandTotal(),
+
+	})
+});
+
+// app.post('/minusSmall', function (req, res) {
+// 	var qty1 = pizzaInsta.qtySmallMinus();
+
+// 	res.render('index', {
+// 		small: qty1,
+// 		smallprice: 'R' + pizzaInsta.priceForSmall(),
+// 		total: 'R' + pizzaInsta.grandTotal(),
+// 	})
+// });
 
 
 // start  the server and start listening for HTTP request on the PORT number specified...

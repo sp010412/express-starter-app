@@ -22,4 +22,5 @@ body {
 
 .block{
 	display: flex;
+	margin: 1em;
 }
