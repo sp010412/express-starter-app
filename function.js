@@ -8,11 +8,10 @@ module.exports = function pizza() {
     var mediumPrice = 0;
     var largePrice = 0;
 
-    let smallList = [];
+    //let smallList = [];
     // let mediumList = [];
     // let largeList = [];
 
-  
 
     // Increments the quantity
     function qtySmall() {
@@ -67,21 +66,23 @@ module.exports = function pizza() {
     }
 
     //Orders
-    function actSmall() {
+    // function actSmall() {
 
-        let x = qtySmall();
-        let y = priceForSmall(); 
-        
-        smallList.push({
-            Pizza: "small",
-            Quantity:x,
-            Price:y,
-        });
-    }
+    //     let x = qtySmall();
+    //     let y = priceForSmall(); 
 
-function actionSmall() {
-    return smallList;
-}
+    //     smallList.push({
+    //         Pizza: "small",
+    //         Quantity:x,
+    //         Price:y,
+    //     });
+
+    //     console.log()
+    // }
+
+    // function actionSmall() {
+    //     return smallList;
+    // }
 
     return {
         qtySmall,
@@ -94,8 +95,8 @@ function actionSmall() {
         qtySmallMinus,
         qtyMediumMinus,
         qtyLargeMinus,
-        actSmall,
-        actionSmall,
+        // actSmall,
+        // actionSmall,
 
     }
 }

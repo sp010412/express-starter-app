@@ -22,6 +22,7 @@ const pizzaInsta = pizza();
 
 
 app.get('/', function (req, res) {
+	// pizzaInsta.actSmall()
 
 	res.render('index', {
 		total: 'R' + pizzaInsta.grandTotal(),
