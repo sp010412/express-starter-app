@@ -8,7 +8,13 @@ module.exports = function pizza() {
     var mediumPrice = 0;
     var largePrice = 0;
 
-// Increments the quantity
+    let smallList = [];
+    // let mediumList = [];
+    // let largeList = [];
+
+  
+
+    // Increments the quantity
     function qtySmall() {
         return ++small
     }
@@ -22,20 +28,21 @@ module.exports = function pizza() {
     }
 
 
-// Decrements the quantity
-function qtySmallMinus() {
-    return --small;
-}
+    // Decrements the quantity
+    function qtySmallMinus() {
+        return --small;
+    }
 
-function qtyMediumMinus() {
-    return --medium;
-}
 
-function qtyLargeMinus() {
-    return --large;
-}
+    function qtyMediumMinus() {
+        return --medium;
+    }
 
-//Total cost for each flavour
+    function qtyLargeMinus() {
+        return --large;
+    }
+
+    //Total cost for each flavour
     function priceForSmall() {
         smallPrice = (31.99 * small).toFixed(2);
         return smallPrice;
@@ -51,13 +58,30 @@ function qtyLargeMinus() {
         return largePrice
     }
 
-//Toatal cost for all ordered pizzas
+    //Toatal cost for all ordered pizzas
     function grandTotal() {
-        let x = smallPrice 
+        let x = smallPrice
         let y = mediumPrice
         let z = largePrice;
-        return  (Number(x) +  Number(y) +  Number(z)).toFixed(2);
+        return (Number(x) + Number(y) + Number(z)).toFixed(2);
     }
+
+    //Orders
+    function actSmall() {
+
+        let x = qtySmall();
+        let y = priceForSmall(); 
+        
+        smallList.push({
+            Pizza: "small",
+            Quantity:x,
+            Price:y,
+        });
+    }
+
+function actionSmall() {
+    return smallList;
+}
 
     return {
         qtySmall,
@@ -70,6 +94,8 @@ function qtyLargeMinus() {
         qtySmallMinus,
         qtyMediumMinus,
         qtyLargeMinus,
+        actSmall,
+        actionSmall,
 
     }
 }

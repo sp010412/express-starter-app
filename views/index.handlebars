@@ -3,38 +3,83 @@
 <div class="counter">
 
     <div class="block">
-        <h3>Small Pizza</h3>
+        <div>
+            <h3>Small Pizza</h3>
+        </div>
 
-        Qty: {{small}}
+        <div class="div">
+            Qty: {{small}}
+        </div>
+        <div class="div"></div>
         Price:{{smallprice}}
-        <form action="/addSmall " method="post">
-            <button class="btn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
-        </form>
-        <form action="/minusSmall " method="post"></form>
-        <button class="btn" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
-        </form>
+
+        <div class="flex">
+            <div>
+                <form action="/addSmall " method="post">
+                    <button class="btn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <div>
+                <form action="/minusSmall " method="post">
+                    <button class="btn" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                </form>
+            </div>
+        </div>
     </div>
+
+
     <div class="block">
-        <h3> Medium Pizza</h3>
-        Qty:{{medium}}
-        Price:{{mediumprice}}
-        <form action="/addMedium  " method="post">
-            <button class="btn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
-        </form>
-        <form action="/minusMedium " method="post"></form>
-        <button class="btn" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
-        </form>
+        <div>
+            <h3> Medium Pizza</h3>
+        </div>
+
+        <div class="div">
+            Qty:{{medium}}
+        </div>
+
+        <div class="div">
+            Price:{{mediumprice}}
+        </div>
+
+        <div class="flex">
+            <div>
+                <form action="/addMedium  " method="post">
+                    <button class="btn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <div>
+                <form action="/minusMedium " method="post">
+                    <button class="btn" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                </form>
+            </div>
+        </div>
     </div>
+
+
     <div class="block">
-        <h3>Large Pizza</h3>
-        Qty:{{large}}
-        Price:{{largeprice}}
-        <form action="/addLarge" method="post">
-            <button class="btn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
-        </form>
-        <form action="/minusLarge " method="post"></form>
-        <button class="btn" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
-        </form>
+        <div>
+            <h3>Large Pizza</h3>
+        </div>
+
+        <div class="div">
+            Qty:{{large}}
+        </div>
+        <div class="div">
+            Price:{{largeprice}}
+        </div>
+        <div class="flex">
+            <div>
+                <form action="/addLarge" method="post">
+                    <button class="btn" type="submit"><i class="fa fa-plus" aria-hidden="true"></i></button>
+                </form>
+            </div>
+            <div>
+                <form action="/minusLarge " method="post">
+                    <button class="btn" type="submit"><i class="fa fa-minus" aria-hidden="true"></i></button>
+                </form>
+            </div>
+
+        </div>
     </div>
 
     <div class="block">
@@ -42,6 +87,10 @@
     </div>
 
 </div>
+
+<form action="/orders " method="post">
+    <button class="btn" type="submit">Check Out</button>
+</form>
 
 <div class="pizzas">
 
@@ -60,7 +109,8 @@
                 </i>
             </div>
             <div class="orderBox">
-                <button class="btn orderSmallPizza" type="submit" style="margin-left: auto">Order small pizza</button>
+                <button class="btn orderSmallPizza" type="submit" style="margin-left: auto">Order small
+                    pizza</button>
             </div>
         </div>
     </form>
@@ -81,7 +131,8 @@
             </div>
 
             <div class="orderBox">
-                <button class="btn orderMediumPizza" type="submit" style="margin-left: auto">Order medium pizza</button>
+                <button class="btn orderMediumPizza" type="submit" style="margin-left: auto">Order medium
+                    pizza</button>
             </div>
         </div>
     </form>
@@ -100,7 +151,8 @@
                 </div>
             </div>
             <div class="orderBox">
-                <button class="btn orderLargePizza" type="submit" style="margin-left: auto">Order large pizza</button>
+                <button class="btn orderLargePizza" type="submit" style="margin-left: auto">Order large
+                    pizza</button>
             </div>
         </div>
     </form>
